@@ -61,7 +61,8 @@ from DewmiBot.modules.helper_funcs.misc import paginate_modules
 from DewmiBot.modules.helper_funcs.readable_time import get_readable_time
 
 PM_START_TEXT = """
-*Hi, my name is* 🌸 දෙව්මි උත්තරා [🌸](https://telegra.ph/file/8cabfc3e05d3302d73dde.jpg) !
+*Hi, my name is* 🌸 දෙව්මි උත්තරා [🌸](
+STICKERS = "CAACAgUAAx0CS6YhoQAC02VhQUW7iB4ci3lcSXHtLVOjFzZlDQACUQMAAvPvEVY76k2QN6u20iAE") !
 
 I am a Powerful Group Manager bot Developed by [GD Hiruna](t.me/hirunaofficial)
 
@@ -809,7 +810,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "I am now online!")
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "Yes,I am now online! 💝😃")
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!"
