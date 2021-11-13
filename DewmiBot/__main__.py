@@ -61,19 +61,18 @@ from DewmiBot.modules.helper_funcs.misc import paginate_modules
 from DewmiBot.modules.helper_funcs.readable_time import get_readable_time
 
 PM_START_TEXT = """
-*Hi, my name is* 🌸 දෙව්මි උත්තරා [🌸](
-STICKERS = "CAACAgUAAx0CS6YhoQAC02VhQUW7iB4ci3lcSXHtLVOjFzZlDQACUQMAAvPvEVY76k2QN6u20iAE") !
+*Hi, my name is* [Whitesnake💝](https://telegra.ph/file/10d0fc31cd55e3fc0fe9d.jpg) !
 
-I am a Powerful Group Manager bot Developed by [GD Hiruna](t.me/hirunaofficial)
+I am a Powerful Group Manager bot Developed by [@Dilasnalithmantha123](t.me/Dilasnalithmantha123)
 
 You can find my list of available commands with /help.
 
-©2021 [@DewmiBot](t.me/dewmibot) Bot All Rights Reserved
+©2021 [@Dilasnalithmantha123]() Bot All Rights Reserved
 """
 
 HELP_STRINGS = f"""
-*Main Commands :* [🤖](https://telegra.ph/file/8cabfc3e05d3302d73dde.jpg)
-Hey there! My name is *🌸 දෙව්මි උත්තරා 🌸*
+*Main Commands :* [🤖](https://telegra.ph/file/80fc7d5a97ed2935f69d4.jpg)
+Hey there! My name is *Whitesnake💝*
 I'm Powerful BOT to Make Your Groups Secured and Organized & I help admins to manage their groups! Have a look at the following for an idea of some of \
 the things I can help you with.
 
@@ -91,35 +90,35 @@ Main commands available:
 
 
 DONATE_STRING = """
-*🌸 දෙව්මි උත්තරා 🌸* is hosted on one of Heroku's Servers and doesn't require any donations as of now but \
-You can donate to the developer of the *🌸 දෙව්මි උත්තරා 🌸*, [GD Hiruna](t.me/hirunaofficial)
+*Whitesnake💝* is hosted on one of Heroku's Servers and doesn't require any donations as of now but \
+You can donate to the developer of the *Whitesnake💝*, [@Dilasnalithmantha123](t.me/Dilasnalithmantha123)
 """
 
 BUTTONS = [
                     [
                         InlineKeyboardButton(
                              text=" 👪 Support Group ",
-                             url="https://t.me/sltechzoneofficial"),
+                             url="https://t.me/whitesnaketg"),
                          InlineKeyboardButton(
                              text=" 🔔 Update Channel ",
-                             url="https://t.me/sltechzone")
+                             url="https://t.me/whitesnakeboth")
                     ],
                     [
                         InlineKeyboardButton(
                             text=" 🙋 Help ",
-                            url="https://t.me/dewmibot?start=help"),
+                            url="http://t.me/miss_white_snake_bot?start=help"),
                          InlineKeyboardButton(
                             text=" ⚡️ Developer ",
-                             url="https://t.me/hirunaofficial")        
+                             url="https://t.me/Dilasnalithmantha123")        
                        
                     ],
                     [
                         InlineKeyboardButton(
                             text=" ➕ Add Me to Your Group ",
-                            url="t.me/dewmibot?startgroup=true")
+                            url="http://t.me/miss_white_snake_bot?startgroup=true")
                     
                     ],
-            ]
+            ] 
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -810,7 +809,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "Yes,I am now online! 💝😃")
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "Yes,I am now online! 💝")
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!"
