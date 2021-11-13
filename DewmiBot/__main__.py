@@ -1,3 +1,4 @@
+Dilasna lithmantha, [11/13/2021 5:42 PM]
 import html
 import importlib
 import json
@@ -118,7 +119,7 @@ BUTTONS = [
                             url="http://t.me/miss_white_snake_bot?startgroup=true")
                     
                     ],
-            ] 
+            ]
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -139,7 +140,8 @@ for module_name in ALL_MODULES:
     if not hasattr(imported_module, "__mod_name__"):
         imported_module.__mod_name__ = imported_module.__name__
 
-    if not imported_module.__mod_name__.lower() in IMPORTED:
+Dilasna lithmantha, [11/13/2021 5:42 PM]
+if not imported_module.__mod_name__.lower() in IMPORTED:
         IMPORTED[imported_module.__mod_name__.lower()] = imported_module
     else:
         raise Exception("Can't have two modules with the same name! Please change one")
@@ -192,7 +194,7 @@ def test(update, context):
     except:
         pass
     update.effective_message.reply_text(
-        "Hola tester! _I_ *have* `markdown`", parse_mode=ParseMode.MARKDOWN
+        "Hola tester! _I_ *have* markdown", parse_mode=ParseMode.MARKDOWN
     )
     update.effective_message.reply_text("This person edited a message")
     print(update.effective_message)
@@ -250,7 +252,8 @@ def error_handler(update, context):
     """Log the error and send a telegram message to notify the developer."""
     LOGGER.error(msg="Exception while handling an update:", exc_info=context.error)
 
-    tb_list = traceback.format_exception(
+Dilasna lithmantha, [11/13/2021 5:42 PM]
+tb_list = traceback.format_exception(
         None, context.error, context.error.__traceback__
     )
     tb = "".join(tb_list)
@@ -367,7 +370,9 @@ def DewmiBot_about_callback(update, context):
     if query.data == "aboutmanu_":
         query.message.edit_text(
             text=f"👋 Hi again!  The name's {dispatcher.bot.first_name} is a Powerful BOT to Make Your Groups Secured and Organized Developed by [GD Hiruna](https://t.me/hirunaofficial)"
-            f"\n\n✍️ Join [SL Tech Zone](https://t.me/sltechzone) To Keep Yourself Updated About {dispatcher.bot.first_name}"
+
+Dilasna lithmantha, [11/13/2021 5:42 PM]
+f"\n\n✍️ Join [SL Tech Zone](https://t.me/sltechzone) To Keep Yourself Updated About {dispatcher.bot.first_name}"
             f"\n\n💪 I have the normal GROUP MANAGING functions like flood control, a warning system etc but I mainly have the advanced and handy Antispam system and the SIBYL banning system which safegaurds and helps your group from spammers."
             f"\n\n👊 I Can Manage Your Groups Smoothly, With Some Special Features."
             f"\n\n[👇](https://telegra.ph/file/8cabfc3e05d3302d73dde.jpg) You Can Know More About Me By Clicking The Below Buttons.",
@@ -438,7 +443,9 @@ def DewmiBot_about_callback(update, context):
         query.message.edit_text(
             text=f"<b> ｢ Admin Permissions 」</b>"
             f"\n\n👉 To avoid slowing down, {dispatcher.bot.first_name} caches admin rights for each user. This cache lasts about 10 minutes; this may change in the future. This means that if you promote a user manually (without using the /promote command), {dispatcher.bot.first_name} will only find out ~10 minutes later."
-            f"\n\n👉 IF you want to update them immediately, you can use the /admincache command,thta'll force {dispatcher.bot.first_name} to check who the admins are again and their permissions"
+
+Dilasna lithmantha, [11/13/2021 5:42 PM]
+f"\n\n👉 IF you want to update them immediately, you can use the /admincache command,thta'll force {dispatcher.bot.first_name} to check who the admins are again and their permissions"
             f"\n\n👉 If you are getting a message saying:"
             f"\n<Code>You must be this chat administrator to perform this action!</code>"
             f"\n\n👉This has nothing to do with {dispatcher.bot.first_name}'s rights; this is all about YOUR permissions as an admin. {dispatcher.bot.first_name} respects admin permissions; if you do not have the Ban Users permission as a telegram admin, you won't be able to ban users with {dispatcher.bot.first_name}. Similarly, to change {dispatcher.bot.first_name} settings, you need to have the Change group info permission."
@@ -472,7 +479,9 @@ def DewmiBot_about_callback(update, context):
             "\n_If you're looking for a way to automatically warn users when they say certain things, use the /addwarn command._"
             "\n\n👉 /welcomemute <off/soft/strong>: All users that join, get muted"
             "\n_ A button gets added to the welcome message for them to unmute themselves. This proves they aren't a bot! soft - restricts users ability to post media for 24 hours. strong - mutes on join until they prove they're not bots._",
-            parse_mode=ParseMode.MARKDOWN,
+
+Dilasna lithmantha, [11/13/2021 5:42 PM]
+parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="Back", callback_data="aboutmanu_howto")]]
             ),
@@ -555,7 +564,9 @@ def get_help(update, context):
         module = args[1].lower()
         text = (
             "Here is the available help for the *{}* module:\n".format(
-                HELPABLE[module].__mod_name__
+
+Dilasna lithmantha, [11/13/2021 5:42 PM]
+HELPABLE[module].__mod_name__
             )
             + HELPABLE[module].__help__
         )
@@ -660,7 +671,9 @@ def settings_button(update, context):
 
         elif next_match:
             chat_id = next_match.group(1)
-            next_page = int(next_match.group(2))
+
+Dilasna lithmantha, [11/13/2021 5:42 PM]
+next_page = int(next_match.group(2))
             chat = context.bot.get_chat(chat_id)
             query.message.edit_text(
                 "Hi there! There are quite a few settings for *{}* - go ahead and pick what "
@@ -764,7 +777,9 @@ def is_chat_allowed(update, context):
                 raise DispatcherHandlerStop
     if len(BL_CHATS) != 0:
         chat_id = update.effective_message.chat_id
-        if chat_id in BL_CHATS:
+
+Dilasna lithmantha, [11/13/2021 5:42 PM]
+if chat_id in BL_CHATS:
             context.bot.send_message(
                 chat_id=update.message.chat_id, text="Unallowed chat! Leaving..."
             )
@@ -809,7 +824,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "Yes,I am now online! 💝")
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "Yes,I am now online 💝 !")
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!"
@@ -870,7 +885,7 @@ def main():
     updater.idle()
 
 
-if __name__ == "__main__":
+if name == "__main__":
     LOGGER.info("Successfully loaded modules: " + str(ALL_MODULES))
     telethn.start(bot_token=TOKEN)
     pbot.start()
